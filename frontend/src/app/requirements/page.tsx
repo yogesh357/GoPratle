@@ -85,15 +85,10 @@ export default function RequirementsFeedPage() {
       {/* Page Header */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
         <div>
-          <span className="text-xs font-bold text-indigo-400 uppercase tracking-wider flex items-center gap-1.5">
-            <LayoutGrid className="w-3.5 h-3.5" /> Live MongoDB Requirement Feed
-          </span>
           <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight mt-1">
             Event Requirements Explorer
           </h1>
-          <p className="text-xs sm:text-sm text-slate-400 mt-1">
-            Browse all event requirement postings stored in MongoDB across Planners, Performers, and Crew.
-          </p>
+
         </div>
 
         <div className="flex items-center space-x-3">
@@ -162,11 +157,10 @@ export default function RequirementsFeedPage() {
                 key={tab.id}
                 type="button"
                 onClick={() => setCategoryFilter(tab.id)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold flex items-center space-x-1.5 transition-all ${
-                  isActive
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                    : 'bg-slate-950 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
-                }`}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold flex items-center space-x-1.5 transition-all ${isActive
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                  : 'bg-slate-950 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800'
+                  }`}
               >
                 <TabIcon className="w-3.5 h-3.5" />
                 <span>{tab.label}</span>

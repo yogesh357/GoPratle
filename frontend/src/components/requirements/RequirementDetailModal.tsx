@@ -118,8 +118,8 @@ export default function RequirementDetailModal({
             {requirement.category === 'planner'
               ? '🎯 Planner Specifications'
               : requirement.category === 'performer'
-              ? '🎸 Performer & Technical Rider'
-              : '🛠️ Crew Roles & Working Terms'}
+                ? '🎸 Performer & Technical Rider'
+                : '🛠️ Crew Roles & Working Terms'}
           </h3>
 
           {/* Planner Details */}
@@ -305,7 +305,7 @@ export default function RequirementDetailModal({
             <button
               type="button"
               onClick={() => {
-                if (confirm('Are you sure you want to delete this requirement from MongoDB?')) {
+                if (confirm('Are you sure you want to delete this requirement from Database?')) {
                   onDelete(requirement._id);
                   onClose();
                 }

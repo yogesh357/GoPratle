@@ -17,13 +17,7 @@ export default function Footer() {
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
               Full-Stack Developer Intern Technical Assignment. A 4-step dynamic Requirement Posting Flow connecting event organizers with Planners, Performers, and Crew.
             </p>
-            <div className="flex items-center space-x-3 pt-2 text-xs text-slate-400">
-              <span className="flex items-center gap-1"><Code2 className="w-3.5 h-3.5 text-indigo-400" /> Next.js 15 App Router</span>
-              <span>•</span>
-              <span className="flex items-center gap-1"><Server className="w-3.5 h-3.5 text-emerald-400" /> Node/Express</span>
-              <span>•</span>
-              <span className="flex items-center gap-1"><Database className="w-3.5 h-3.5 text-amber-400" /> MongoDB</span>
-            </div>
+
           </div>
 
           <div>
@@ -71,9 +65,7 @@ export default function Footer() {
 
         <div className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© 2026 GoPratle Assignment. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Engineered with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for GoPratle
-          </p>
+
         </div>
       </div>
     </footer>

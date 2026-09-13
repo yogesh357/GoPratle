@@ -51,7 +51,7 @@ export default function SuccessModal({
 
         <div>
           <span className="inline-block text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full uppercase tracking-wider mb-2">
-            Successfully Saved to MongoDB
+            Successfully Saved
           </span>
           <h3 className="text-2xl font-black text-white tracking-tight">Requirement Published!</h3>
           <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -76,7 +76,7 @@ export default function SuccessModal({
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-slate-400">MongoDB Document ID</span>
+            <span className="text-slate-400">Document ID</span>
             <div className="flex items-center space-x-2">
               <code className="font-mono text-indigo-300 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-500/30 text-[11px]">
                 {requirement._id}

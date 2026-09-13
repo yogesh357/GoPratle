@@ -30,7 +30,7 @@ export default function HomePage() {
       .then((res) => {
         if (res.success) setStats(res.data);
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   return (
@@ -42,13 +42,6 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-12 pb-20 sm:pt-20 sm:pb-28">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          {/* Top Pill */}
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold shadow-md">
-            <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
-            <span>GoPratle Full-Stack Developer Technical Assignment</span>
-            <span className="text-slate-600">•</span>
-            <span className="text-indigo-400">Next.js + Express + MongoDB</span>
-          </div>
 
           {/* Main Hero Headline */}
           <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1] max-w-4xl mx-auto">
@@ -60,7 +53,6 @@ export default function HomePage() {
             A 4-step interactive wizard designed to capture tailored event specifications for{' '}
             <span className="text-indigo-400 font-semibold">Event Planners</span>,{' '}
             <span className="text-purple-400 font-semibold">Performers</span>, and{' '}
-            <span className="text-emerald-400 font-semibold">Crew Staff</span> with real-time validation and MongoDB persistence.
           </p>
 
           {/* Action CTAs */}
@@ -78,8 +70,8 @@ export default function HomePage() {
               href="/requirements"
               className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm sm:text-base border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-black/40"
             >
-              <LayoutGrid className="w-5 h-5 text-indigo-400" />
-              <span>Browse Live MongoDB Feed</span>
+              Explore Requirements
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
@@ -151,7 +143,7 @@ export default function HomePage() {
               {
                 step: '04',
                 title: 'Validation & Submission',
-                desc: 'Comprehensive interactive summary preview, contact person inputs, urgent flag, Zod schema validation, and storage into MongoDB.',
+                desc: 'Comprehensive interactive summary preview, contact person inputs, urgent flag, Zod schema validation, and storage.',
                 icon: Send,
                 color: 'text-pink-400',
                 border: 'border-pink-500/30',
@@ -273,26 +265,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tech Stack Banner */}
-      <section className="py-12 border-t border-slate-900 bg-slate-950 text-slate-400">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs">
-          <div className="flex items-center space-x-2">
-            <Sparkles className="w-4 h-4 text-indigo-400" />
-            <span className="font-semibold text-white">Technical Architecture:</span>
-          </div>
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 font-medium">
-              <Code2 className="w-3.5 h-3.5 text-indigo-400" /> Next.js 15 (App Router & Tailwind)
-            </span>
-            <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 font-medium">
-              <Server className="w-3.5 h-3.5 text-emerald-400" /> Node.js & Express REST API
-            </span>
-            <span className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 font-medium">
-              <Database className="w-3.5 h-3.5 text-amber-400" /> MongoDB & Mongoose Schema
-            </span>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }

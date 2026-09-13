@@ -77,7 +77,7 @@ export default function Step4ReviewSubmit({
           Review Requirement & Contact Information
         </h2>
         <p className="text-sm text-slate-400 mt-1">
-          Review all the details you’ve configured, enter your contact information, and publish to MongoDB.
+          Review all the details you’ve configured, enter your contact information, and publish to database.
         </p>
       </div>
 
@@ -443,7 +443,7 @@ export default function Step4ReviewSubmit({
           {isSubmitting ? (
             <>
               <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-              <span>Validating & Storing in MongoDB...</span>
+              <span>Validating & Storing...</span>
             </>
           ) : (
             <>

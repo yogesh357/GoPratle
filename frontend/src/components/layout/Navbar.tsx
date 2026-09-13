@@ -50,37 +50,12 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <nav className="flex items-center space-x-2 sm:space-x-4">
-            {/* Live API Status Indicator */}
-            <div className="hidden md:flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-medium bg-slate-900 border border-slate-800">
-              {apiOnline === true ? (
-                <>
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    API Connected <CheckCircle2 className="w-3 h-3" />
-                  </span>
-                </>
-              ) : apiOnline === false ? (
-                <>
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                  <span className="text-amber-400 flex items-center gap-1">
-                    API Offline <AlertCircle className="w-3 h-3" />
-                  </span>
-                </>
-              ) : (
-                <>
-                  <span className="w-2 h-2 rounded-full bg-slate-500 animate-ping"></span>
-                  <span className="text-slate-400">Checking API...</span>
-                </>
-              )}
-            </div>
-
             <Link
               href="/requirements"
-              className={`flex items-center space-x-2 px-3.5 py-2 rounded-xl text-sm font-semibold transition-all ${
-                pathname === '/requirements'
-                  ? 'bg-slate-800 text-white border border-slate-700 shadow-sm'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-900/60'
-              }`}
+              className={`flex items-center space-x-2 px-3.5 py-2 rounded-xl text-sm font-semibold transition-all ${pathname === '/requirements'
+                ? 'bg-slate-800 text-white border border-slate-700 shadow-sm'
+                : 'text-slate-300 hover:text-white hover:bg-slate-900/60'
+                }`}
             >
               <LayoutGrid className="w-4 h-4 text-indigo-400" />
               <span>Browse Feed</span>
@@ -88,11 +63,10 @@ export default function Navbar() {
 
             <Link
               href="/post-requirement"
-              className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
-                pathname === '/post-requirement'
-                  ? 'bg-gradient-to-r from-indigo-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/30'
-                  : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20 hover:shadow-indigo-500/40 hover:scale-[1.02]'
-              }`}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${pathname === '/post-requirement'
+                ? 'bg-gradient-to-r from-indigo-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/30'
+                : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20 hover:shadow-indigo-500/40 hover:scale-[1.02]'
+                }`}
             >
               <PlusCircle className="w-4 h-4" />
               <span>Post Requirement</span>
