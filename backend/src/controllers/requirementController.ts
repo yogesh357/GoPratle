@@ -2,11 +2,6 @@ import { Request, Response, NextFunction } from 'express';
 import { Requirement } from '../models/Requirement';
 import mongoose from 'mongoose';
 
-/**
- * @desc    Create a new requirement post (Step 4 submission)
- * @route   POST /api/requirements
- * @access  Public
- */
 export const createRequirement = async (
   req: Request,
   res: Response,
@@ -15,7 +10,6 @@ export const createRequirement = async (
   try {
     const requirementData = req.body;
 
-    // Prune details of other categories to ensure data integrity
     if (requirementData.category === 'planner') {
       delete requirementData.performerDetails;
       delete requirementData.crewDetails;
@@ -40,11 +34,6 @@ export const createRequirement = async (
   }
 };
 
-/**
- * @desc    Get all requirement posts with filtering, searching, and pagination
- * @route   GET /api/requirements
- * @access  Public
- */
 export const getAllRequirements = async (
   req: Request,
   res: Response,
@@ -104,11 +93,6 @@ export const getAllRequirements = async (
   }
 };
 
-/**
- * @desc    Get single requirement by ID
- * @route   GET /api/requirements/:id
- * @access  Public
- */
 export const getRequirementById = async (
   req: Request,
   res: Response,
@@ -143,12 +127,6 @@ export const getRequirementById = async (
     next(error);
   }
 };
-
-/**
- * @desc    Delete a requirement
- * @route   DELETE /api/requirements/:id
- * @access  Public
- */
 export const deleteRequirement = async (
   req: Request,
   res: Response,
@@ -184,11 +162,6 @@ export const deleteRequirement = async (
   }
 };
 
-/**
- * @desc    Get aggregate stats of requirements
- * @route   GET /api/requirements/stats/summary
- * @access  Public
- */
 export const getRequirementStats = async (
   req: Request,
   res: Response,
